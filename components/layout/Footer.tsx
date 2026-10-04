@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="font-playfair font-medium text-xl text-carbon mb-2">Шкарин</p>
             <p className="text-slate text-sm font-inter leading-relaxed">
               Веб-разработчик для бизнеса.<br />
-              Москва / Remote
+              {siteConfig.location}
             </p>
           </div>
 

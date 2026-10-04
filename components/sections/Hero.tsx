@@ -153,8 +153,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-wide w-full pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[calc(100vh-8rem)]">
+      <div className="container-wide w-full pt-20 pb-12 md:pt-32 md:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[calc(100vh-6rem)] md:min-h-[calc(100vh-8rem)]">
 
           {/* LEFT — Text */}
           <motion.div

@@ -304,6 +304,29 @@ body {
 /* ─────────────────────────────────────────────
    MOBILE OVERRIDES
 ───────────────────────────────────────────── */
+
+/* Small phones (320-479px) */
+@media (max-width: 479px) {
+  .container-wide {
+    padding: 0 16px;
+  }
+
+  .section-padding {
+    padding-top: clamp(48px, 8vw, 80px);
+    padding-bottom: clamp(48px, 8vw, 80px);
+  }
+
+  .btn-primary,
+  .btn-ghost,
+  .btn-outline-dark {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* All mobile devices (up to 768px) */
 @media (max-width: 768px) {
   :root {
     cursor: auto;
@@ -311,4 +334,83 @@ body {
   *, *::before, *::after {
     cursor: auto !important;
   }
+
+  /* Tighter section spacing on mobile */
+  .section-padding {
+    padding-top: clamp(48px, 8vw, 96px);
+    padding-bottom: clamp(48px, 8vw, 96px);
+  }
+
+  /* Amber line (testimonials) — less padding on mobile */
+  .amber-line {
+    padding-left: 16px;
+  }
+
+  /* Filter tabs scrollable */
+  .filter-tab {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  /* Marquee slower on mobile for readability */
+  .marquee-track {
+    gap: 32px;
+    animation-duration: 20s;
+  }
 }
+
+/* ─────────────────────────────────────────────
+   PROJECT DETAIL PAGES — MOBILE OVERRIDES
+   These pages use a lot of inline styles, so we
+   need CSS overrides for responsive behavior.
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Fix all grid layouts in project detail pages */
+  .grid.grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Nav in project pages — make back link visible */
+  nav .hidden.md\:flex {
+    display: none;
+  }
+
+  /* Hero text sizing in project pages */
+  section h1 {
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Stats row in project heroes — stack vertically on very small screens */
+  .flex.gap-8 {
+    flex-wrap: wrap;
+  }
+
+  .flex.gap-12 {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  /* Form inputs — full width */
+  input, select, textarea {
+    font-size: 16px !important; /* Prevent iOS zoom */
+  }
+
+  /* Steps flow — wrap properly */
+  .flex.flex-wrap.gap-0 {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Tablet-ish (481px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+  .grid.grid-cols-2.md\\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
